@@ -269,7 +269,7 @@ ocf:pacemaker:ClusterMon - runs crm_mon in the background
 
 # lsblk
 # lsscsi
-
+## lsscsi, required rpm name lsscsi. (install with yum or dnf)
 
 ## Device mapper multipath:
 
@@ -277,6 +277,10 @@ ocf:pacemaker:ClusterMon - runs crm_mon in the background
 # man mpathconf
 # mpathconf --enable --with_multipathd y --user_friendly_names y
 # multipath -ll
+
+# discover WWID device multipah with command:
+/usr/lib/udev/scsi_id -g -u <device>
+# where device is /dev/sda or /dev/sdc or /dev/sdN
 
 ## Multipath configuration:
 
