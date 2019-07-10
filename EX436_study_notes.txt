@@ -71,7 +71,9 @@
 # vim /etc/sysconfig/pacemaker
 > PCMK_logfile
 > PCMK_logpriority
-
+## After making changes in the pacemaker it is necessary to stop and start the cluster
+# pcs cluster stop --all
+# pcs cluster start --all
 
 ## Quorum configuration.
 ## Check the man page for information!
